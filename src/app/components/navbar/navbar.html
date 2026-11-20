@@ -1,0 +1,17 @@
+<div class="bg-black h-20 w-full flex items-center p-7">
+    <button
+      type="button"
+      (click)="menuToggled.emit(!menuOpen)"
+      class="mr-2 cursor-pointer text-white"
+      [attr.aria-label]="menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
+      [attr.aria-expanded]="menuOpen"
+    >
+      @if (menuOpen) {
+        <svg lucideX></svg>
+      } @else {
+        <svg lucideMenu></svg>
+      }
+    </button>
+    <svg lucideHouse class="text-white mr-2 cursor-pointer"></svg>
+  <h1 class="text-white font-bold text-xl"> <span class="text-indigo-500 text-2xl">T</span>askFlow</h1>
+</div>
